@@ -1,39 +1,108 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Swift Developer - Contact Information</title>
+    <title>Robert Pinl - Privacy Policy</title>
     <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #F6F6F6;
+      :root {
+        --primary-color: #0055FF;
+        --text-color: #333333;
+        --background-color: #F6F6F6;
+        --container-background: #FFFFFF;
       }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: var(--background-color);
+        color: var(--text-color);
+        line-height: 1.6;
+      }
+
       .container {
         max-width: 800px;
         margin: 0 auto;
-        padding: 20px;
-        background-color: #FFFFFF;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        background-color: var(--container-background);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 12px;
       }
+
       .container + .container {
         margin-top: 20px;
       }
-      h1, h2 {
+
+      h1 {
         margin-top: 0;
+        color: var(--text-color);
+        font-size: 2em;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 10px;
       }
+
+      h3 {
+        color: var(--text-color);
+        margin-top: 1.5em;
+        font-size: 1.3em;
+      }
+
       ul {
         list-style: none;
         padding-left: 0;
       }
+
       li {
-        margin-bottom: 10px;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
       }
+
       a {
-        color: #0055FF;
+        color: var(--primary-color);
         text-decoration: none;
+        transition: color 0.2s ease;
+      }
+
+      a:hover {
+        color: #003cbd;
+        text-decoration: underline;
+      }
+
+      p {
+        margin: 1em 0;
+      }
+
+      /* Contact icons */
+      .contact-icon {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+      }
+
+      /* Dark mode support */
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --text-color: #ffffff;
+          --background-color: #1a1a1a;
+          --container-background: #2d2d2d;
+        }
+
+        .container {
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+      }
+
+      /* Responsive design */
+      @media (max-width: 600px) {
+        body {
+          padding: 10px;
+        }
+
+        .container {
+          padding: 20px;
+        }
       }
     </style>
   </head>
@@ -41,28 +110,55 @@
     <div class="container">
       <h1>Robert Pinl</h1>
       <ul>
-        <li>Email: <a href="mailto:robert.pinl@icloud.com">robert.pinl@icloud.com</a></li>
-        <li>GitHub: <a href="https://github.com/robertpinl">https://github.com/robertpinl</a></li>
+        <li>Email:&nbsp<a href="mailto:robert.pinl@icloud.com">robert.pinl@icloud.com</a></li>
+        <li>GitHub:&nbsp<a href="https://github.com/robertpinl">https://github.com/robertpinl</a></li>
       </ul>
     </div>
-    <div class="container">
+      <div class="container">
         <h1>Privacy Policy</h1>
-          <h3>Personal Information</h3>
-          <p>We Collect When you use our App, we may automatically collect certain information about your device, including information about your web browser, IP address, time zone, and some of the cookies that are installed on your device. Additionally, as you use our App, we may collect information about the individual web pages or screens that you view, what websites or search terms referred you to our App, and information about how you interact with our App.</p>
-          <p>We collect this information using telemetry services such as Google Analytics. We may also use AdMob to display advertisements within our App. AdMob may collect information about your device, including your advertising identifier, which allows advertisers to target their ads to your interests.</p>
-          <h3>How We Use Your Personal Information</h3>
-          <p>We use the personal information we collect to understand how users interact with our App and to improve the user experience. This includes optimizing the App's performance, improving the App's functionality, and tailoring advertisements to your interests.</p>
-          <p>We may also use the information we collect to generate analytics and statistics about how our App is used. These analytics may be shared with third parties, but they will not include any personally identifiable information.</p>
-          <h3>Sharing Your Personal Information</h3>
-          <p>We may share your personal information with third-party service providers who help us to operate our App, such as hosting providers, analytics providers, and AdMob. We will only share your information to the extent necessary to provide these services.</p>
-          <p>We may also share your information if required to do so by law or if you violate our Terms of Service.</p>
-          <h3>Your Rights</h3>
-          <p>You have the right to access the personal information we hold about you and to ask that your personal information be corrected, updated, or deleted. If you would like to exercise this right, please contact us using the contact information provided below.</p>
-          <h3>Data Retention</h3>
-          <p>We will retain your personal information for as long as necessary to fulfill the purposes outlined in this Privacy Policy. We will also retain and use your personal information to the extent necessary to comply with our legal obligations, resolve disputes, and enforce our agreements.</p>
-          <p>Changes to this Privacy Policy We may update this Privacy Policy from time to time in order to reflect changes to our practices or for other operational, legal, or regulatory reasons.</p>
-          <h3>Contact Me</h3>
-          <p>If you have any questions about this Privacy Policy, please contact me at robert.pinl@icloud.com.</p>
+
+        <h3>Information We Collect</h3>
+        <p>
+          When you use our app, we may automatically collect certain non-personally identifiable information about your device and usage. This can include your device type, operating system version, app version, country or region, and how you interact with the app (e.g., which screens are viewed and for how long).
+        </p>
+
+        <h3>Analytics</h3>
+        <p>
+          We use TelemetryDeck to collect anonymized analytics data. This helps us understand general usage patterns and improve the performance and user experience of our app. TelemetryDeck does not collect personally identifiable information and is designed with user privacy in mind.
+        </p>
+
+        <h3>How We Use the Information</h3>
+        <p>
+          The information we collect is used solely to:
+          <ul>
+            <li>- Monitor app performance</li>
+            <li>- Understand user engagement and usage trends</li>
+            <li>- Improve app features and functionality</li>
+          </ul>
+        </p>
+
+        <h3>Sharing Your Information</h3>
+        <p>
+          We do not share your personal information with third parties. Analytics data collected through TelemetryDeck is processed in a privacy-focused manner and not shared with advertisers or other external parties.
+        </p>
+        <p>
+          We may disclose information if required to do so by law or in response to a valid legal request.
+        </p>
+
+        <h3>Data Retention</h3>
+        <p>
+          We retain anonymized analytics data only as long as necessary to support the ongoing development and improvement of the app.
+        </p>
+
+        <h3>Changes to This Privacy Policy</h3>
+        <p>
+          We may update this Privacy Policy from time to time to reflect changes in our practices, technology, or legal obligations. Updates will be posted within the app or on our website.
+        </p>
+
+        <h3>Contact Us</h3>
+        <p>
+          If you have any questions or concerns about this Privacy Policy, please contact us at <a href="mailto:robert.pinl@icloud.com">robert.pinl@icloud.com</a>.
+        </p>
       </div>
-  </body>
+    </body>
 </html>
