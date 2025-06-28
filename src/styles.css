@@ -1,0 +1,378 @@
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --accentColor: var(--pico-color-azure-500);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="transparent" opacity="0"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  opacity: 0.3;
+}
+
+.hero .container {
+  margin: 0 auto;
+  padding: 0;
+  max-width: none;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 2rem;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.8;
+  line-height: 1.8;
+}
+
+.hero-description br {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .hero-description br {
+    display: none;
+  }
+}
+
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Button Styles */
+.btn-primary, .btn-secondary {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border: 2px solid;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.btn-primary, .btn-secondary {
+  background: transparent;
+  color: var(--accentColor);
+  border-color: var(--accentColor);
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+  background: var(--accentColor);
+  color: white;
+  border-color: var(--accentColor);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Apps Section */
+.apps-section {
+  padding: 5rem 0;
+}
+
+.apps-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: var(--h1-color);
+}
+
+.apps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.app-card {
+  /* background: var(--card-background-color); */
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  border: 1px solid var(--card-border-color);
+  margin-bottom: 0;
+}
+
+.app-card:hover {
+  box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+}
+
+/* Dark mode specific styling */
+@media (prefers-color-scheme: dark) {
+  .app-card {
+    box-shadow: none;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .app-card:hover {
+    box-shadow: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+}
+
+.app-content {
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.app-icon {
+  flex-shrink: 0;
+}
+
+.app-icon img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.app-card:hover .app-icon img {
+  transform: scale(1.05);
+}
+
+.app-title {
+  margin: 0 0 0 0;
+  line-height: 1.2;
+}
+
+.app-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--h1-color);
+}
+
+.app-content h3.app-title {
+  margin-bottom: 0 !important;
+}
+
+.app-content p {
+  color: var(--p-color);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  font-size: 0.9rem;
+}
+
+.app-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.app-store-link {
+  padding: 0;
+  background: transparent;
+  color: white;
+}
+
+.app-store-link:hover {
+  background: transparent;
+  transform: translateY(-1px);
+}
+
+.app-store-badge {
+  height: 50px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.app-store-link:hover .app-store-badge {
+  transform: scale(1.05);
+}
+
+.learn-more-link {
+  color: var(--accentColor);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.learn-more-link:hover {
+  color: var(--accentColor);
+  text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+  background: var(--card-background-color);
+  border-top: 1px solid var(--card-border-color);
+  padding: 0 0 2rem 0;
+  margin-top: 0;
+}
+
+.footer nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.footer nav a {
+  color: var(--p-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer nav a:hover {
+  color: var(--primary);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .hero-description {
+    font-size: 1rem;
+  }
+  
+  .hero-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn-primary, .btn-secondary {
+    width: 200px;
+    text-align: center;
+  }
+  
+  .apps-grid {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+  
+  .apps-section {
+    padding: 3rem 0;
+  }
+  
+  .apps-section h2 {
+    font-size: 2rem;
+  }
+  
+  .footer nav ul {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-content {
+    padding: 1rem;
+  }
+  
+  .app-content {
+    padding: 1rem;
+  }
+  
+  .app-links {
+    flex-direction: column;
+  }
+  
+  .app-store-link, .app-store-badge {
+    text-align: center;
+  }
+  
+  .app-store-link {
+    align-self: flex-start;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Loading animation for images */
+.app-image::before {
+  content: '📱';
+  font-size: 3rem;
+  opacity: 0.3;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.app-image {
+  position: relative;
+}

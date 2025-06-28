@@ -4,24 +4,105 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
-  <title>Your Name</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1.5.12/css/pico.min.css"/>
+  <title>Robert Pinl - iOS & macOS Developer</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.colors.min.css" />
+  <link rel="stylesheet" href="src/styles.css" />
 </head>
 <body>
-<main class="container">
-  <h1>Robert Pinl</h1>
-  <p>
-    iOS and macOS developer building fast, privacy-focused apps with Swift and SwiftUI.<br>Passionate about clean design
-    and great user experience.
-  </p>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Robert Pinl</h1>
+        <p class="hero-subtitle">iOS and macOS Developer</p>
+        <p class="hero-description">
+          Building fast, privacy-focused apps with Swift and SwiftUI.<br>
+          Passionate about clean design and great user experience.
+        </p>
+        <div class="hero-cta">
+          <a href="#apps" class="btn-primary">View My Apps</a>
+          <a href="mailto:robert.pinl.contact@gmail.com" class="btn-secondary">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <nav>
-    <ul>
-      <li><a href="https://github.com/robertpinl">GitHub</a></li>
-      <li><a href="mailto:robert.pinl.contact@gmail.com">Email</a></li>
-      <li><a href="./privacy-policy.html">Privacy Policy</a></li>
-    </ul>
-  </nav>
-</main>
+  <!-- Apps Section -->
+  <section id="apps" class="apps-section">
+    <div class="container">
+      <h2>My Apps</h2>
+      <div class="apps-grid">
+        <article class="app-card">
+          <div class="app-content">
+            <div class="app-header">
+              <div class="app-icon">
+                <img src="img/servicelog-icon@1x.webp" srcset="img/servicelog-icon@1x.webp 1x, img/servicelog-icon@2x.webp 2x" alt="ServiceLog App Icon" loading="lazy">
+              </div>
+              <h3 class="app-title">ServiceLog</h3>
+            </div>
+            <p>Simplify your car maintenance with ServiceLog! Track oil changes, repairs, and service history with an easy-to-use interface. Store parts details, set reminders, and backup with iCloud. Lightweight and privacy-friendly. <a href="https://servicelog-app.com/" class="learn-more-link" target="_blank">Learn More</a></p>
+            <div class="app-links">
+              <a href="https://apps.apple.com/app/id1628067059" class="app-store-link" target="_blank">
+                <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store" class="app-store-badge">
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="app-card">
+          <div class="app-content">
+            <div class="app-header">
+              <div class="app-icon">
+                <img src="img/workclock-icon.webp" srcset="img/workclock-icon.webp 1x, img/workclock-icon@2x.webp 2x" alt="WorkClock App Icon" loading="lazy">
+              </div>
+              <h3 class="app-title">WorkClock</h3>
+            </div>
+            <p>Effortlessly track your work hours with WorkClock! Keep complete history of work hours, view weekly and monthly summaries, and check workdays at a glance. Clean interface with PRO features for multiple jobs, PDF export, and advanced customization.</p>
+            <div class="app-links">
+              <a href="https://apps.apple.com/app/id6504451291" class="app-store-link" target="_blank">
+                <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store" class="app-store-badge">
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="app-card">
+          <div class="app-content">
+            <div class="app-header">
+              <div class="app-icon">
+                <img src="img/travelbudget-icon.webp" srcset="img/travelbudget-icon.webp 1x, img/travelbudget-icon@2x.webp 2x" alt="TravelBudget App Icon" loading="lazy">
+              </div>
+              <h3 class="app-title">TravelBudget</h3>
+            </div>
+            <p>Your travel expense tracker! Log expenses in real-time, manage multiple trips, and track budgets with support for 150+ currencies. Get daily insights, visual reports, and automatic currency conversion to stay on top of your travel finances.</p>
+            <div class="app-links">
+              <a href="https://apps.apple.com/app/id6744050831" class="app-store-link" target="_blank">
+                <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg" alt="Download on the App Store" class="app-store-badge">
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <hr>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <nav>
+        <ul>
+          <li><a href="https://github.com/robertpinl">GitHub</a></li>
+          <li><a href="mailto:robert.pinl.contact@gmail.com">Email</a></li>
+          <li><a href="./privacy-policy.html">Privacy Policy</a></li>
+        </ul>
+      </nav>
+      <p>&copy; 2025 Robert Pinl. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>
