@@ -151,6 +151,8 @@ body {
   transition: all 0.3s ease;
   border: 1px solid var(--card-border-color);
   margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .app-card:hover {
@@ -173,6 +175,9 @@ body {
 .app-content {
   padding: 1.5rem;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .app-header {
@@ -215,21 +220,24 @@ body {
 
 .app-content p {
   color: var(--p-color);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   line-height: 1.6;
   font-size: 0.9rem;
+  flex-grow: 0;
 }
 
 .app-links {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+  margin-top: auto;
 }
 
 .app-store-link {
   padding: 0;
   background: transparent;
   color: white;
+  cursor: pointer;
 }
 
 .app-store-link:hover {
